@@ -1,0 +1,21 @@
+.container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+  width: 100%;
+  height: 8vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: .45s opacity ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.text {
+  font-size: 1.5em;
+}

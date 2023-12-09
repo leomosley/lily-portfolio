@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './page.module.css';
-import Piece from './components/Piece';
 import { fetchData } from './firebase';
+
+// Components
+import Piece from './components/Piece';
+import Header from './components/Header';
 
 export async function getData() {
   const res = await fetchData();
@@ -26,10 +29,13 @@ export default async function Home() {
   const transformed = await transformData();
 
   return (
+    <>
+    <Header />
     <div className={styles.container}>
       {transformed.map((item) => (
         <Piece key={item.id} {...item} />
-      ))}
+        ))}
     </div>
+    </>
   );
 };
