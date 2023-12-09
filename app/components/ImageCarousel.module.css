@@ -1,0 +1,52 @@
+.windowImage {
+  display: flex;
+  left: 0;
+  align-items: center;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.changeImageButton {
+  position: absolute;
+  margin-top: 375px;
+  border: none;
+  width: 25px;
+  height: 50px;
+  background: black;
+  opacity: 0.2;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.changeImageButton.forward {
+  margin-left: 575px; 
+}
+
+.changeImageButton:hover {
+  opacity: 0.4;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.6em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.6em;
+  color: var(--background);
+}
+
+.chevron.right:before {
+	left: -0.1em;
+	transform: rotate(45deg);
+}
+
+.chevron.left:before {
+	left: 0.15em;
+	transform: rotate(-135deg);
+}

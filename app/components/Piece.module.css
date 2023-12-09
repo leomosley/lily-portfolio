@@ -1,0 +1,54 @@
+.piece {
+  height: 400px;
+  width: 300px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.piece.landscape {
+  height: 400px;
+  width: 711.13px;
+  min-width: 711.13px;
+}
+
+.piece:hover .image {
+  filter: brightness(0.75);
+}
+
+.piece:hover .text {
+  opacity: 1;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.textContainer {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  width: 200px;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: var(--main-font);
+  text-align: center;
+  justify-content: centre;
+  color: #f6f6f6;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}

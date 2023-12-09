@@ -1,0 +1,76 @@
+.mask {
+  position: fixed;
+  z-index: 9;
+  background: var(--text);
+  opacity: 0.4;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.close {
+  position: absolute;
+  border: none;
+  background: var(--background);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  right: 5px;
+  top: 5px;
+}
+
+.window {
+  position: fixed;
+  display: flex;
+  height: 800px;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  margin-top: 10vh;
+  top: 0;
+  left: 0;
+  background: var(--background);
+  z-index: 11;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  padding: 15px 20px 0px 20px;
+}
+
+.title {
+  font-family: var(--main-font);
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.type {
+  font-family: var(--main-font);
+  font-size: 20px;
+  margin: 0;
+  left: 0;
+}
+
+.main {
+  display: flex;
+  padding: 10px 30px 10px 20px;
+  overflow-y: auto;
+}
+
+.mainText {
+  font-family: var(--main-font);
+  font-size: 15px;
+  color: var(--text);
+  margin: 0;
+}
