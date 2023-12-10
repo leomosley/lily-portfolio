@@ -52,7 +52,7 @@ export default function Piece({ name, images, id, date, description, type } : Pr
       <ContentWindow {...contentWindowProps}/>
     </Context.Provider>
     <div className={`${styles.piece} ${landscape? styles.landscape : ''}`}  onClick={openContentWindow}>
-      <img 
+      <img
         className={styles.image}
         src={images[0]}
         alt={name}

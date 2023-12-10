@@ -1,12 +1,20 @@
-.windowImage {
+.container {
+  height: 400px;
   display: flex;
-  left: 0;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
-  min-width: 600px;
+  cursor: pointer;
 }
 
-.changeImageButton {
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.button {
   position: absolute;
   margin-top: 375px;
   border: none;
@@ -18,11 +26,11 @@
   cursor: pointer;
 }
 
-.changeImageButton.forward {
+.button.forward {
   margin-left: 575px; 
 }
 
-.changeImageButton:hover {
+.button:hover {
   opacity: 0.4;
 }
 

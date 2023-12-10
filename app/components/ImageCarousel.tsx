@@ -7,7 +7,7 @@ export default function ImageCarousel({imageArr} : { imageArr: string[] }) {
   const BackButton = () => {
     return (
       <button
-        className={`${styles.changeImageButton} ${styles.back}`}
+        className={`${styles.button} ${styles.back}`}
         onClick={() => setIndex(prev => prev-1)}
       ><span className={`${styles.chevron} ${styles.left}`}></span>
       </button>
@@ -17,7 +17,7 @@ export default function ImageCarousel({imageArr} : { imageArr: string[] }) {
   const ForwardButton = () => {
     return (
       <button
-      className={`${styles.changeImageButton} ${styles.forward}`}
+      className={`${styles.button} ${styles.forward}`}
         onClick={() => setIndex(prev => prev+1)}
       ><span className={`${styles.chevron} ${styles.right}`}></span>
       </button>
@@ -25,13 +25,10 @@ export default function ImageCarousel({imageArr} : { imageArr: string[] }) {
   }
 
   return (
-    <>
-    <img 
-      className={styles.windowImage}
-      src={imageArr[index]}
-    />
-    {!(index === 0) ? <BackButton /> : <></>}
-    {!(index === (imageArr.length-1))  ? <ForwardButton /> : <></>}
-    </>
+    <div className={styles.container}>
+      <img className={styles.image} src={imageArr[index]} />
+      {!(index === 0) ? <BackButton /> : <></>}
+      {!(index === (imageArr.length-1))  ? <ForwardButton /> : <></>}
+    </div>
   )
 }
