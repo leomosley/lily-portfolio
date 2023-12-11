@@ -15,13 +15,26 @@ export async function getData() {
   return res;
 };
 
+interface Work {
+  date: string;
+  description: string;
+  id: string;
+  name: string;
+  type: string;
+  
+}
+
+interface Image {
+  imageURL: string;
+}
+
 export default async function Home() {
   const data = await getData();
 
-  const transformData = () => {
-    return Object.values(data.work).map(workItem => {
+  const transformData = (): Array<Work & { images: string[] }> => {
+    return (Object.values(data.work) as Work[]).map((workItem: Work) => {
       const imageObj = data.image[workItem.id];
-      const images = imageObj ? Object.values(imageObj).map(item => item.imageURL) : [];
+      const images: string[] = imageObj ? (Object.values(imageObj) as Image[]).map((imageItem: Image)=> imageItem.imageURL) : [];
       return { ...workItem, images };
     });
   };
