@@ -5,7 +5,7 @@ import styles from './Piece.module.css';
 // Components
 import ContentWindow from './ContentWindow';
 
-type Props = {
+interface Props  {
   name: string;
   images: string[];
   id: string;
@@ -14,7 +14,7 @@ type Props = {
   type: string;
 }
 
-type ContextType = {
+interface ContextType {
   contentWindowOpen?: boolean;
   setContentWindowOpen?: Dispatch<SetStateAction<boolean>>;
 };

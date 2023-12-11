@@ -5,7 +5,7 @@ import styles from './ContentWindow.module.css';
 import ImageCarousel from './ImageCarousel';
 import { Context } from './Piece';
 
-type Props = {
+interface Props {
   name: string;
   images: string[];
   date: string;
