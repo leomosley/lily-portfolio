@@ -6,3 +6,24 @@
   --title-font: 'Shadows Into Light', cursive;
   --main-font: 'Poppins', sans-serif;
 }
+
+body {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  background: #f3f3f3;
+  width: 12px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b7b7b7;
+  height: 30px;
+  border-radius: 5px;
+}

@@ -1,4 +1,3 @@
-'use client';
 import React, { useState, useContext } from 'react';
 import styles from './ContentWindow.module.css';
 
@@ -26,7 +25,7 @@ export default function ContentWindow ({  name, images, date, description, type 
   return contentWindowOpen && (
     <>
     <div 
-      className={styles.mask}
+      className={styles.mask} 
       onClick={closeContentWindow}
     ></div>
     <div className={styles.window}>
@@ -34,17 +33,17 @@ export default function ContentWindow ({  name, images, date, description, type 
         className={styles.close}
         onClick={closeContentWindow}
       >
-        <span>&times;</span>
+        <span className={styles.cross}>&times;</span>
       </button>
-      <ImageCarousel imageArr={images} />
       <div className={styles.content}>
+        <ImageCarousel imageArr={images} />
         <div className={styles.header}>
           <p className={styles.title}>{name}</p>
           <p className={styles.type}>{type}</p>
         </div>
-        <div className={styles.main}>
-          <p className={styles.mainText}>{description}</p>
-        </div>
+      </div>
+      <div className={styles.main}>
+        <p className={styles.mainText}>{description}</p>
       </div>
     </div>
     </>

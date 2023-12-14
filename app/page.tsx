@@ -6,17 +6,17 @@ import { fetchData } from './firebase';
 import Piece from './components/Piece';
 import Header from './components/Header';
 
+interface Image {
+  imageURL: string;
+}
+
 interface Work {
   date: string;
   description: string;
   id: string;
   name: string;
   type: string;
-  
-}
-
-interface Image {
-  imageURL: string;
+  images?: string[];
 }
 
 export async function getData(): Promise<Array<Work & { images: string[]}>> {
