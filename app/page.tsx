@@ -6,20 +6,23 @@ import { fetchData } from './firebase';
 import Piece from './components/Piece';
 import Header from './components/Header';
 
-interface Image {
-  imageURL: string;
-}
-
 interface Work {
   date: string;
   description: string;
   id: string;
   name: string;
   type: string;
-  images?: string[];
 }
 
-export async function getData(): Promise<Array<Work & { images: string[]}>> {
+interface Image {
+  imageURL: string;
+}
+
+interface ExtendedWork extends Work {
+  images: string[];
+}
+
+export async function getData():  Promise<ExtendedWork[]> {
   const data = await fetchData();
 
   if (!data) {
