@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './page.module.css';
-import { fetchData } from './firebase';
+import { fetchData } from '../database/firebase';
 
 // Components
 import Piece from './components/Piece';
@@ -22,7 +22,7 @@ interface ExtendedWork extends Work {
   images: string[];
 }
 
-export async function getData():  Promise<ExtendedWork[]> {
+export async function getData(): Promise<ExtendedWork[]> {
   const data = await fetchData();
 
   if (!data) {
