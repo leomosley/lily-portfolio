@@ -25,6 +25,16 @@
   font-size: 30px;
 }
 
+.close.landscape {
+  background: black;
+  opacity: 0.1  ;
+  padding: 5px;
+}
+
+.cross.landscape {
+  color: white;
+}
+
 .window {
   position: fixed;
   display: flex;
@@ -72,6 +82,19 @@
   overflow-y: auto;
 }
 
+.main.hide {
+  display: none;
+}
+
+.mainLand {
+  display: none;
+  overflow-y: auto;
+}
+
+.mainLand.show {
+  display: flex;
+}
+
 .mainText {
   font-family: var(--main-font);
   font-size: 15px;
@@ -94,6 +117,10 @@
     width: calc(600px * 3/4);
   }
 
+  .window.landscape {
+    width: 800px;
+  }
+
   .close {
     background: black;
     opacity: 0.1;
@@ -108,5 +135,9 @@
 @media screen and (max-width: 600px) {
   .window {
     max-width: calc(300px * 3/4);
+  }
+
+  .window.landscape {
+    max-width: 800px;
   }
 }
